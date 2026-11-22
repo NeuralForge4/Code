@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeLens — Real-Time AI Code Analyzer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg-base: #070b14;
+      --glass-bg: rgba(15, 23, 42, 0.75);
+      --glass-border: rgba(148, 163, 184, 0.16);
+      --editor-bg: #0a0f1c;
+    }
+    html:not(.dark) {
+      --bg-base: #f1f5f9;
+      --glass-bg: rgba(255, 255, 255, 0.88);
+      --glass-border: rgba(15, 23, 42, 0.1);
+      --editor-bg: #f8fafc;
+    }
+    body { background-color: var(--bg-base); transition: background-color 0.25s ease; }
+    .dot-grid {
+      background-image: radial-gradient(rgba(148, 163, 184, 0.16) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+    }
+    .editor-surface { background: var(--editor-bg); }
+  </style>
+</head>
+<body class="text-slate-900 dark:text-slate-100 min-h-screen dot-grid antialiased">
+  <header class="sticky top-0 z-30 glass-card border-b border-slate-200/60 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 flex items-center justify-center text-white font-mono font-bold text-lg shadow-lg shadow-cyan-500/25">
+          &lt;/&gt;
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">CodeLens</span>
+            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">Live Auto-Analyze</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Instant Multi-Language Static, Syntax, Complexity & ML Defect Analyzer</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/60 dark:border-slate-700/70 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="toolchainText">Engine: Ready</span>
+        </div>
+        <button id="themeToggle" class="px-3 py-1.5 rounded-lg text-xs font-medium glass-card hover:border-cyan-500/50 transition">
+          <span id="themeIcon">☀️</span> <span id="themeLabel" class="hidden sm:inline">Light Glass</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <!-- Left Column: Clean Code Input Editor -->
+    <section class="lg:col-span-6 flex flex-col gap-4">
+      <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+        <div class="px-4 py-3 border-b border-slate-200/70 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 bg-slate-100/60 dark:bg-slate-900/70">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+            </div>
+            <span id="activeFilename" class="px-2.5 py-1 rounded-md bg-white/80 dark:bg-slate-800 text-xs font-mono font-medium text-slate-700 dark:text-cyan-300 border border-slate-200 dark:border-slate-700">Auto-Detect Ready</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <select id="langSelect" onchange="analyzeCode()" class="text-xs font-semibold rounded-lg px-2.5 py-1.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700">
+              <option value="auto">Auto-Detect Language</option>
+              <option value="python">Python (.py)</option>
+              <option value="c">C (.c)</option>
+              <option value="cpp">C++ (.cpp)</option>
+              <option value="java">Java (.java)</option>
+            </select>
+            <label class="cursor-pointer text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300/80 dark:hover:bg-slate-700 border border-slate-300/70 dark:border-slate-700">
+              Upload File
+              <input id="fileInput" type="file" accept=".py,.c,.cpp,.cc,.h,.hpp,.java,.txt" class="hidden" />
+            </label>
+            <button onclick="clearAll()" class="text-xs font-semibold px-2.5 py-1.5 rounded-lg text-rose-400 hover:bg-rose-500/10 border border-rose-500/20">Clear</button>
+          </div>
+        </div>
+
+        <div class="relative flex editor-surface font-mono text-[13px] leading-6 h-[475px]">
+          <pre id="lineNumbers" class="select-none py-4 px-3 text-right text-slate-400 dark:text-slate-600 border-r border-slate-200/70 dark:border-slate-800/80 overflow-hidden w-12 shrink-0">1</pre>
+          <textarea id="codeInput" spellcheck="false" placeholder="Paste or type any Python, C, C++, or Java code here — analysis runs automatically..." class="w-full h-full p-4 bg-transparent resize-none focus:outline-none text-slate-800 dark:text-slate-100 whitespace-pre overflow-auto"></textarea>
+        </div>
+
+        <div class="px-4 py-3 border-t border-slate-200/70 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 bg-slate-100/60 dark:bg-slate-900/70">
+          <div class="text-xs font-mono text-slate-500 dark:text-slate-400">
+            <span id="locCounter">0 lines</span> • <span id="liveStatus" class="text-emerald-400">Auto-analyzes on paste/input</span>
+          </div>
+          <button id="analyzeBtn" onclick="analyzeCode()" class="px-5 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:brightness-110 shadow-lg shadow-cyan-500/25 transition">
+            Analyze Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Results Dashboard -->
+    <section class="lg:col-span-6 flex flex-col gap-4">
+      <div class="glass-card rounded-2xl p-5 shadow-xl">
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <div class="relative w-32 h-32 shrink-0 flex items-center justify-center">
+            <svg class="w-32 h-32 -rotate-90" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" stroke-width="10" class="text-slate-200 dark:text-slate-800" />
+              <circle id="healthArc" cx="60" cy="60" r="50" fill="none" stroke="#10b981" stroke-width="10" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" class="transition-all duration-500" />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span id="healthScoreText" class="text-3xl font-extrabold">--</span>
+              <span class="text-[10px] uppercase tracking-wider font-semibold text-slate-500">Quality Score</span>
+            </div>
+          </div>
+
+          <div class="flex-1 w-full">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span id="detectedLangPill" class="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-indigo-500/15 text-indigo-400 border border-indigo-500/30">Ready</span>
+              <span id="verdictBadge" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-200 dark:bg-slate-800">Waiting for Input</span>
+            </div>
+            <p id="summaryHeadline" class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              Paste or upload any source code to inspect syntax errors, logic bugs, security flaws, complexity, and ML defect risk.
+            </p>
+            <div class="grid grid-cols-4 gap-2 text-center">
+              <div class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/70">
+                <div id="statIssues" class="text-lg font-bold text-rose-500">0</div>
+                <div class="text-[11px] text-slate-500">Findings</div>
+              </div>
+              <div class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/70">
+                <div id="statCC" class="text-lg font-bold text-cyan-500">0</div>
+                <div class="text-[11px] text-slate-500">Max CC</div>
+              </div>
+              <div class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/70">
+                <div id="statHeuristic" class="text-lg font-bold text-amber-500">Low</div>
+                <div class="text-[11px] text-slate-500">Heuristic</div>
+              </div>
+              <div class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/70">
+                <div id="statML" class="text-lg font-bold text-indigo-400">0.00</div>
+                <div class="text-[11px] text-slate-500">ML Score</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl p-5 shadow-xl flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-bold uppercase tracking-wider">Detected Errors & Findings</h2>
+          <div class="flex items-center gap-1 text-xs">
+            <button onclick="setFilter('all')" data-filter="all" class="filter-btn px-2.5 py-1 rounded-md font-medium bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">All</button>
+            <button onclick="setFilter('critical')" data-filter="critical" class="filter-btn px-2.5 py-1 rounded-md font-medium text-slate-400">Critical</button>
+            <button onclick="setFilter('warning')" data-filter="warning" class="filter-btn px-2.5 py-1 rounded-md font-medium text-slate-400">Warning</button>
+            <button onclick="setFilter('style')" data-filter="style" class="filter-btn px-2.5 py-1 rounded-md font-medium text-slate-400">Style</button>
+          </div>
+        </div>
+        <div id="findingsList" class="space-y-2.5 max-h-[265px] overflow-y-auto pr-1">
+          <div class="text-xs text-slate-500 py-8 text-center border border-dashed border-slate-700 rounded-xl">
+            Editor is empty. Paste or upload your code on the left to see instant error diagnostics.
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="glass-card rounded-2xl p-4 shadow-xl">
+          <h3 class="text-xs font-bold uppercase tracking-wider mb-2.5">Cyclomatic Complexity</h3>
+          <div id="complexityList" class="space-y-2 text-xs">
+            <p class="text-slate-500 py-4 text-center">Function metrics will appear here.</p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-4 shadow-xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-wider mb-1.5">ML Defect Classifier</h3>
+            <p id="mlInfoText" class="text-[11px] text-slate-400 leading-relaxed">
+              TF-IDF char n-gram (2,5) + LogisticRegression loaded from <code>artifacts/defect_classifier.joblib</code>.
+            </p>
+          </div>
+          <div class="p-2.5 mt-3 rounded-xl bg-amber-500/10 border border-amber-500/25 text-[11px] text-amber-300">
+            <strong>Note:</strong> Combines deterministic syntax/AST rules with ML risk probability.
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl px-4 py-3 flex items-center justify-between gap-2">
+        <span id="toastMsg" class="text-xs font-medium text-emerald-400"></span>
+        <div class="flex items-center gap-2 ml-auto">
+          <button onclick="copyReport()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-700">Copy Report</button>
+          <button onclick="downloadTxt()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Download .txt</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentReport = null;
+    let activeFilter = 'all';
+    let currentFilename = '';
+    let debounceTimer = null;
+
+    const codeInput = document.getElementById('codeInput');
+    const lineNumbers = document.getElementById('lineNumbers');
+    const langSelect = document.getElementById('langSelect');
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      document.getElementById('themeIcon').textContent = isDark ? '☀️' : '🌙';
+      document.getElementById('themeLabel').textContent = isDark ? 'Light Glass' : 'Dark Obsidian';
+    });
+
+    function updateLineNumbers() {
+      const lines = codeInput.value.split('\n');
+      lineNumbers.textContent = lines.map((_, i) => i + 1).join('\n');
+      document.getElementById('locCounter').textContent = codeInput.value.trim() ? `${lines.length} lines` : '0 lines';
+    }
+
+    function clientDetectLang(code) {
+      if (/(\bpublic\s+class\b|\bprivate\s+class\b|\bSystem\.out\.print|\bimport\s+java\.|\bpublic\s+static\s+void\s+main\b|\bString\s+\w+)/.test(code)) return 'java';
+      if (/(#include\s*<(iostream|vector|string|cstring|memory|algorithm|cmath)>|\bstd::|\bcout\s*<<|\bcin\s*>>|\bnew\s+\w+\[|\bnamespace\s+\w+)/.test(code)) return 'cpp';
+      if (/(#include\s*<(stdio\.h|stdlib\.h|string\.h|math\.h)>|\bprintf\s*\(|\bmalloc\s*\(|\bgets\s*\()/.test(code)) return 'c';
+      return 'python';
+    }
+
+    function scheduleAutoAnalyze(delayMs = 450) {
+      clearTimeout(debounceTimer);
+      const code = codeInput.value;
+      if (!code.trim()) {
+        resetDashboard();
+        return;
+      }
+      if (langSelect.value === 'auto' && !currentFilename) {
+        const guessed = clientDetectLang(code);
+        const labelMap = { python: 'pasted.py (Auto)', c: 'pasted.c (Auto)', cpp: 'pasted.cpp (Auto)', java: 'Pasted.java (Auto)' };
+        document.getElementById('activeFilename').textContent = labelMap[guessed] || 'Auto-Detect';
+      }
+      document.getElementById('liveStatus').textContent = 'Analyzing...';
+      debounceTimer = setTimeout(() => {
+        analyzeCode();
+      }, delayMs);
+    }
+
+    codeInput.addEventListener('input', () => {
+      if (!document.getElementById('fileInput').files.length) {
+        currentFilename = '';
+      }
+      updateLineNumbers();
+      scheduleAutoAnalyze(450);
+    });
+
+    codeInput.addEventListener('paste', () => {
+      currentFilename = '';
+      langSelect.value = 'auto';
+      setTimeout(() => {
+        updateLineNumbers();
+        scheduleAutoAnalyze(120);
+      }, 10);
+    });
+
+    codeInput.addEventListener('scroll', () => { lineNumbers.scrollTop = codeInput.scrollTop; });
+
+    document.getElementById('fileInput').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      langSelect.value = 'auto';
+      currentFilename = file.name;
+      document.getElementById('activeFilename').textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        codeInput.value = ev.target.result;
+        updateLineNumbers();
+        analyzeCode();
+      };
+      reader.readAsText(file);
+    });
+
+    function resetDashboard() {
+      currentReport = null;
+      document.getElementById('activeFilename').textContent = 'Auto-Detect Ready';
+      document.getElementById('detectedLangPill').textContent = 'Ready';
+      document.getElementById('verdictBadge').textContent = 'Waiting for Input';
+      document.getElementById('verdictBadge').className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-200 dark:bg-slate-800';
+      document.getElementById('summaryHeadline').textContent = 'Paste or upload any source code to inspect syntax errors, logic bugs, security flaws, complexity, and ML defect risk.';
+      document.getElementById('healthScoreText').textContent = '--';
+      document.getElementById('healthArc').style.strokeDashoffset = '314.16';
+      document.getElementById('statIssues').textContent = '0';
+      document.getElementById('statCC').textContent = '0';
+      document.getElementById('statHeuristic').textContent = 'Low';
+      document.getElementById('statML').textContent = '0.00';
+      document.getElementById('liveStatus').textContent = 'Auto-analyzes on paste/input';
+      document.getElementById('findingsList').innerHTML = '<div class="text-xs text-slate-500 py-8 text-center border border-dashed border-slate-700 rounded-xl">Editor is empty. Paste or upload your code on the left to see instant error diagnostics.</div>';
+      document.getElementById('complexityList').innerHTML = '<p class="text-slate-500 py-4 text-center">Function metrics will appear here.</p>';
+    }
+
+    function clearAll() {
+      clearTimeout(debounceTimer);
+      codeInput.value = '';
+      currentFilename = '';
+      langSelect.value = 'auto';
+      document.getElementById('fileInput').value = '';
+      updateLineNumbers();
+      resetDashboard();
+    }
+
+    async function analyzeCode() {
+      const code = codeInput.value;
+      if (!code.trim()) {
+        resetDashboard();
+        return;
+      }
+      const btn = document.getElementById('analyzeBtn');
+      btn.disabled = true;
+      btn.textContent = 'Analyzing...';
+
+      try {
+        const res = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            code: code,
+            language: langSelect.value,
+            filename: currentFilename
+          })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          showToast(data.error || 'Analysis failed.');
+          return;
+        }
+        currentReport = data;
+        renderDashboard(data);
+        document.getElementById('liveStatus').textContent = `Updated (${data.language.toUpperCase()})`;
+      } catch (err) {
+        document.getElementById('liveStatus').textContent = 'Backend unreachable';
+        showToast('Could not reach Flask backend (/api/analyze).');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Analyze Now';
+      }
+    }
+
+    function renderDashboard(r) {
+      const arc = document.getElementById('healthArc');
+      arc.style.strokeDashoffset = 314.16 - (314.16 * r.health_score) / 100;
+      arc.style.stroke = r.health_score >= 80 ? '#10b981' : (r.health_score >= 55 ? '#f59e0b' : '#f43f5e');
+      document.getElementById('healthScoreText').textContent = r.health_score;
+
+      document.getElementById('detectedLangPill').textContent = `Language: ${r.language.toUpperCase()}`;
+      document.getElementById('toolchainText').textContent = r.toolchain;
+      const vBadge = document.getElementById('verdictBadge');
+      if (r.findings.length === 0) {
+        vBadge.textContent = 'Clean Pass';
+        vBadge.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+        document.getElementById('summaryHeadline').textContent = `No syntax, security, or static issues detected across ${r.loc} lines of ${r.language.toUpperCase()} code.`;
+      } else {
+        vBadge.textContent = `${r.findings.length} Error(s) Found`;
+        vBadge.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/30';
+        document.getElementById('summaryHeadline').textContent = `Detected ${r.findings.length} issue(s) across ${r.loc} lines of ${r.language.toUpperCase()} code.`;
+      }
+
+      document.getElementById('statIssues').textContent = r.findings.length;
+      document.getElementById('statCC').textContent = r.max_cc;
+      document.getElementById('statHeuristic').textContent = r.heuristic_risk;
+      document.getElementById('statML').textContent = Number(r.ml_score).toFixed(2);
+
+      if (r.ml_metrics && r.ml_metrics.dataset_size) {
+        document.getElementById('mlInfoText').textContent =
+          `Trained on ${r.ml_metrics.dataset_size} labeled samples (${r.ml_metrics.vectorizer}, Test Acc: ${(r.ml_metrics.test_accuracy * 100).toFixed(1)}%).`;
+      }
+
+      renderFindingsList();
+
+      document.getElementById('complexityList').innerHTML = r.complexity.map(fn => {
+        const color = fn.rank === 'A' ? 'bg-emerald-500' : (fn.rank === 'B' ? 'bg-amber-500' : 'bg-rose-500');
+        const pct = Math.min(100, fn.cc * 12);
+        return `
+          <div class="p-2.5 rounded-xl bg-slate-100/70 dark:bg-slate-800/60">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-mono font-semibold truncate">${escapeHtml(fn.name)}()</span>
+              <span class="font-mono text-[11px] px-1.5 py-0.5 rounded bg-slate-700 text-slate-200">CC ${fn.cc} • Rank ${fn.rank}</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-slate-700 overflow-hidden">
+              <div class="h-full ${color}" style="width:${pct}%"></div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function setFilter(f) {
+      activeFilter = f;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const active = btn.dataset.filter === f;
+        btn.className = active
+          ? 'filter-btn px-2.5 py-1 rounded-md font-medium bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+          : 'filter-btn px-2.5 py-1 rounded-md font-medium text-slate-400';
+      });
+      if (currentReport) renderFindingsList();
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderFindingsList() {
+      const container = document.getElementById('findingsList');
+      const items = currentReport.findings.filter(f => activeFilter === 'all' || f.severity === activeFilter);
+      if (items.length === 0) {
+        container.innerHTML = '<div class="text-xs text-emerald-400 py-6 text-center bg-emerald-500/10 border border-emerald-500/25 rounded-xl">No findings in this category.</div>';
+        return;
+      }
+      const badgeStyles = {
+        critical: 'bg-rose-500/15 text-rose-400 border-rose-500/30',
+        warning: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
+        style: 'bg-sky-500/15 text-sky-400 border-sky-500/30'
+      };
+      container.innerHTML = items.map(f => `
+        <div class="p-3 rounded-xl bg-slate-100/80 dark:bg-slate-800/65 border border-slate-700/70">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase border ${badgeStyles[f.severity] || badgeStyles.warning}">${f.severity}</span>
+            <span class="font-mono text-[11px] text-slate-400">${escapeHtml(f.rule)} • Line ${f.line}</span>
+          </div>
+          <p class="text-xs font-semibold">${escapeHtml(f.title)}</p>
+          <code class="block my-1.5 px-2.5 py-1 rounded bg-slate-950 text-cyan-300 font-mono text-[11px] overflow-x-auto">${escapeHtml(f.snippet)}</code>
+          <p class="text-[11px] text-slate-300"><strong class="text-emerald-400">Fix:</strong> ${escapeHtml(f.fix)}</p>
+        </div>`).join('');
+    }
+
+    function formatTextReport() {
+      if (!currentReport) return '';
+      const r = currentReport;
+      const lines = [
+        'CODELENS - CODE QUALITY REPORT',
+        '==============================',
+        `Language        : ${r.language.toUpperCase()}`,
+        `Lines of Code   : ${r.loc}`,
+        `Quality Score   : ${r.health_score} / 100`,
+        `Max Complexity  : ${r.max_cc}`,
+        `Heuristic Risk  : ${r.heuristic_risk}`,
+        `ML Defect Score : ${Number(r.ml_score).toFixed(4)}`,
+        '',
+        '--- FINDINGS ---'
+      ];
+      if (r.findings.length === 0) {
+        lines.push('No syntax, security, or static issues detected.');
+      } else {
+        r.findings.forEach((f, i) => {
+          lines.push(`${i + 1}. [${f.severity.toUpperCase()}] (${f.rule}) Line ${f.line}: ${f.title}`);
+          lines.push(`   Fix: ${f.fix}`);
+        });
+      }
+      return lines.join('\n');
+    }
+
+    function copyReport() {
+      if (!currentReport) return showToast('Enter code first.');
+      navigator.clipboard.writeText(formatTextReport());
+      showToast('Report copied to clipboard!');
+    }
+
+    function downloadTxt() {
+      if (!currentReport) return showToast('Enter code first.');
+      const blob = new Blob([formatTextReport()], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'codelens_report.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Downloaded codelens_report.txt');
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('toastMsg');
+      el.textContent = msg;
+      setTimeout(() => { if (el.textContent === msg) el.textContent = ''; }, 3000);
+    }
+
+    updateLineNumbers();
+  </script>
+</body>
+</html>

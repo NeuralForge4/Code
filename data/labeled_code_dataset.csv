@@ -1,0 +1,4251 @@
+code,label,category,language
+"def bubble_sort_0(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_1(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_2(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_3(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_4(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_5(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_6(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_7(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_8(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_9(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_10(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def bubble_sort_11(items: list[int]) -> list[int]:
+    n = len(items)
+    res = list(items)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if res[j] > res[j + 1]:
+                res[j], res[j + 1] = res[j + 1], res[j]
+    return res
+",0,clean,python
+"def find_median_0(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_1(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_2(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_3(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_4(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_5(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_6(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_7(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_8(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_9(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_10(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"def find_median_11(numbers: list[float]) -> float:
+    if not numbers:
+        return 0.0
+    s = sorted(numbers)
+    mid = len(s) // 2
+    if len(s) % 2 == 0:
+        return (s[mid - 1] + s[mid]) / 2.0
+    return float(s[mid])
+",0,clean,python
+"class CacheEntry_0:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_1:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_2:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_3:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_4:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_5:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_6:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_7:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_8:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_9:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_10:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"class CacheEntry_11:
+    def __init__(self, key: str, val: int) -> None:
+        self.key = key
+        self.val = val
+        self.hits = 0
+    def touch(self) -> None:
+        self.hits += 1
+",0,clean,python
+"import json
+def safe_parse_payload_0(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_1(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_2(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_3(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_4(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_5(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_6(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_7(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_8(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_9(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_10(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"import json
+def safe_parse_payload_11(raw_str: str) -> dict:
+    try:
+        return json.loads(raw_str)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+",0,clean,python
+"def matrix_transpose_0(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_1(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_2(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_3(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_4(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_5(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_6(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_7(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_8(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_9(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_10(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"def matrix_transpose_11(mat: list[list[int]]) -> list[list[int]]:
+    if not mat or not mat[0]:
+        return []
+    rows, cols = len(mat), len(mat[0])
+    return [[mat[r][c] for r in range(rows)] for c in range(cols)]
+",0,clean,python
+"import re
+def validate_email_0(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_1(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_2(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_3(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_4(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_5(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_6(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_7(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_8(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_9(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_10(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"import re
+def validate_email_11(email: str) -> bool:
+    pattern = r""^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$""
+    return bool(re.match(pattern, email))
+",0,clean,python
+"#include <stdio.h>
+int sum_array_0(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_1(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_2(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_3(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_4(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_5(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_6(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_7(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_8(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_9(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_10(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stdio.h>
+int sum_array_11(const int *arr, int len) {
+    if (arr == NULL || len <= 0) return 0;
+    int acc = 0;
+    for (int i = 0; i < len; ++i) {
+        acc += arr[i];
+    }
+    return acc;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_0(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_1(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_2(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_3(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_4(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_5(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_6(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_7(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_8(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_9(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_10(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stddef.h>
+size_t safe_strlen_11(const char *s) {
+    if (s == NULL) return 0;
+    size_t count = 0;
+    while (s[count] != '\0') {
+        count++;
+    }
+    return count;
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_0(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_0(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_1(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_1(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_2(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_2(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_3(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_3(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_4(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_4(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_5(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_5(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_6(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_6(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_7(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_7(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_8(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_8(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_9(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_9(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_10(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_10(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdlib.h>
+int* allocate_buffer_11(size_t count) {
+    if (count == 0) return NULL;
+    int *buf = (int *)malloc(count * sizeof(int));
+    if (buf == NULL) return NULL;
+    for (size_t i = 0; i < count; ++i) buf[i] = (int)i;
+    return buf;
+}
+void release_buffer_11(int *buf) {
+    if (buf != NULL) free(buf);
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_0(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_1(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_2(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_3(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_4(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_5(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_6(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_7(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_8(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_9(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_10(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <stdio.h>
+void swap_integers_11(int *x, int *y) {
+    if (x == NULL || y == NULL) return;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+",0,clean,c
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_0(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_1(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_2(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_3(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_4(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_5(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_6(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_7(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_8(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_9(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_10(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <iostream>
+#include <vector>
+#include <numeric>
+int compute_vector_sum_11(const std::vector<int>& data) {
+    return std::accumulate(data.begin(), data.end(), 0);
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_0(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_0"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_1(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_1"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_2(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_2"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_3(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_3"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_4(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_4"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_5(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_5"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_6(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_6"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_7(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_7"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_8(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_8"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_9(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_9"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_10(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_10"");
+}
+",0,clean,cpp
+"#include <memory>
+#include <string>
+std::unique_ptr<std::string> make_label_11(const std::string& prefix) {
+    return std::make_unique<std::string>(prefix + ""_11"");
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_0(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_1(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_2(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_3(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_4(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_5(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_6(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_7(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_8(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_9(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_10(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <fstream>
+#include <string>
+bool write_data_11(const std::string& filename, const std::string& content) {
+    std::ofstream out(filename);
+    if (!out.is_open()) return false;
+    out << content;
+    out.close();
+    return true;
+}
+",0,clean,cpp
+"#include <cmath>
+class Point2D_0 {
+private:
+    double x_, y_;
+public:
+    Point2D_0(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_1 {
+private:
+    double x_, y_;
+public:
+    Point2D_1(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_2 {
+private:
+    double x_, y_;
+public:
+    Point2D_2(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_3 {
+private:
+    double x_, y_;
+public:
+    Point2D_3(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_4 {
+private:
+    double x_, y_;
+public:
+    Point2D_4(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_5 {
+private:
+    double x_, y_;
+public:
+    Point2D_5(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_6 {
+private:
+    double x_, y_;
+public:
+    Point2D_6(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_7 {
+private:
+    double x_, y_;
+public:
+    Point2D_7(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_8 {
+private:
+    double x_, y_;
+public:
+    Point2D_8(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_9 {
+private:
+    double x_, y_;
+public:
+    Point2D_9(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_10 {
+private:
+    double x_, y_;
+public:
+    Point2D_10(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"#include <cmath>
+class Point2D_11 {
+private:
+    double x_, y_;
+public:
+    Point2D_11(double x, double y) : x_(x), y_(y) {}
+    double distance() const { return std::sqrt(x_ * x_ + y_ * y_); }
+};
+",0,clean,cpp
+"import java.util.Objects;
+public class MathService_0 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_1 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_2 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_3 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_4 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_5 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_6 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_7 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_8 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_9 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_10 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.util.Objects;
+public class MathService_11 {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public boolean checkEquality(String first, String second) {
+        return Objects.equals(first, second);
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_0 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_1 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_2 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_3 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_4 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_5 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_6 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_7 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_8 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_9 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_10 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+public class SafeFileReader_11 {
+    public static String getHeader(String filePath) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            return reader.readLine();
+        }
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_0 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_1 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_2 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_3 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_4 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_5 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_6 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_7 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_8 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_9 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_10 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"import java.util.List;
+import java.util.ArrayList;
+public class ListFilter_11 {
+    public static List<Integer> filterPositive(List<Integer> src) {
+        if (src == null) return new ArrayList<>();
+        List<Integer> out = new ArrayList<>();
+        for (Integer num : src) {
+            if (num != null && num > 0) out.add(num);
+        }
+        return out;
+    }
+}
+",0,clean,java
+"public class BankAccount_0 {
+    private double balance;
+    public BankAccount_0(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_1 {
+    private double balance;
+    public BankAccount_1(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_2 {
+    private double balance;
+    public BankAccount_2(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_3 {
+    private double balance;
+    public BankAccount_3(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_4 {
+    private double balance;
+    public BankAccount_4(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_5 {
+    private double balance;
+    public BankAccount_5(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_6 {
+    private double balance;
+    public BankAccount_6(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_7 {
+    private double balance;
+    public BankAccount_7(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_8 {
+    private double balance;
+    public BankAccount_8(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_9 {
+    private double balance;
+    public BankAccount_9(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_10 {
+    private double balance;
+    public BankAccount_10(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"public class BankAccount_11 {
+    private double balance;
+    public BankAccount_11(double initial) {
+        this.balance = Math.max(0.0, initial);
+    }
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+}
+",0,clean,java
+"#include <stdlib.h>
+void leak_test_0() {
+    int *data = (int *)malloc(sizeof(int) * 10);
+    data[0] = 0;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_0() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_0() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 0;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_0() {
+    int* array = new int[10];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_0() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_0() {
+    int stack_num = 0 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_1() {
+    int *data = (int *)malloc(sizeof(int) * 11);
+    data[0] = 1;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_1() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_1() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 1;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_1() {
+    int* array = new int[11];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_1() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_1() {
+    int stack_num = 1 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_2() {
+    int *data = (int *)malloc(sizeof(int) * 12);
+    data[0] = 2;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_2() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_2() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 2;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_2() {
+    int* array = new int[12];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_2() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_2() {
+    int stack_num = 2 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_3() {
+    int *data = (int *)malloc(sizeof(int) * 13);
+    data[0] = 3;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_3() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_3() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 3;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_3() {
+    int* array = new int[13];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_3() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_3() {
+    int stack_num = 3 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_4() {
+    int *data = (int *)malloc(sizeof(int) * 14);
+    data[0] = 4;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_4() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_4() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 4;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_4() {
+    int* array = new int[14];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_4() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_4() {
+    int stack_num = 4 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_5() {
+    int *data = (int *)malloc(sizeof(int) * 15);
+    data[0] = 5;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_5() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_5() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 5;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_5() {
+    int* array = new int[15];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_5() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_5() {
+    int stack_num = 5 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_6() {
+    int *data = (int *)malloc(sizeof(int) * 16);
+    data[0] = 6;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_6() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_6() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 6;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_6() {
+    int* array = new int[16];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_6() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_6() {
+    int stack_num = 6 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_7() {
+    int *data = (int *)malloc(sizeof(int) * 17);
+    data[0] = 7;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_7() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_7() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 7;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_7() {
+    int* array = new int[17];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_7() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_7() {
+    int stack_num = 7 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_8() {
+    int *data = (int *)malloc(sizeof(int) * 18);
+    data[0] = 8;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_8() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_8() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 8;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_8() {
+    int* array = new int[18];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_8() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_8() {
+    int stack_num = 8 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_9() {
+    int *data = (int *)malloc(sizeof(int) * 19);
+    data[0] = 9;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_9() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_9() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 9;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_9() {
+    int* array = new int[19];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_9() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_9() {
+    int stack_num = 9 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_10() {
+    int *data = (int *)malloc(sizeof(int) * 20);
+    data[0] = 10;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_10() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_10() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 10;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_10() {
+    int* array = new int[20];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_10() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_10() {
+    int stack_num = 10 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_11() {
+    int *data = (int *)malloc(sizeof(int) * 21);
+    data[0] = 11;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_11() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_11() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 11;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_11() {
+    int* array = new int[21];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_11() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_11() {
+    int stack_num = 11 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_12() {
+    int *data = (int *)malloc(sizeof(int) * 22);
+    data[0] = 12;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_12() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_12() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 12;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_12() {
+    int* array = new int[22];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_12() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_12() {
+    int stack_num = 12 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_13() {
+    int *data = (int *)malloc(sizeof(int) * 23);
+    data[0] = 13;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_13() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_13() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 13;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_13() {
+    int* array = new int[23];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_13() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_13() {
+    int stack_num = 13 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_14() {
+    int *data = (int *)malloc(sizeof(int) * 24);
+    data[0] = 14;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_14() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_14() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 14;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_14() {
+    int* array = new int[24];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_14() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_14() {
+    int stack_num = 14 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"#include <stdlib.h>
+void leak_test_15() {
+    int *data = (int *)malloc(sizeof(int) * 25);
+    data[0] = 15;
+    /* missing free */
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+void double_free_15() {
+    char *buf = (char *)malloc(64);
+    if (!buf) return;
+    free(buf);
+    free(buf);
+}
+",1,memory_safety,c
+"#include <stdlib.h>
+#include <stdio.h>
+void uaf_15() {
+    int *p = (int *)malloc(sizeof(int));
+    *p = 15;
+    free(p);
+    printf(""%d\n"", *p);
+}
+",1,memory_safety,c
+"#include <iostream>
+void new_mismatch_15() {
+    int* array = new int[25];
+    array[0] = 100;
+    delete array; // BUG: delete instead of delete[]
+}
+",1,memory_safety,cpp
+"#include <iostream>
+void scalar_mismatch_15() {
+    double* val = new double(3.14);
+    delete[] val; // BUG: delete[] instead of delete
+}
+",1,memory_safety,cpp
+"#include <iostream>
+const int& dangling_ref_15() {
+    int stack_num = 15 * 10;
+    return stack_num; // BUG: reference to stack variable
+}
+",1,memory_safety,cpp
+"def eval_call_0(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_0(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_0(uid: str):
+    conn = sqlite3.connect(""db_0.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_0() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_0(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_0(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_0 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_1(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_1(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_1(uid: str):
+    conn = sqlite3.connect(""db_1.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_1() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_1(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_1(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_1 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_2(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_2(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_2(uid: str):
+    conn = sqlite3.connect(""db_2.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_2() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_2(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_2(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_2 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_3(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_3(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_3(uid: str):
+    conn = sqlite3.connect(""db_3.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_3() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_3(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_3(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_3 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_4(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_4(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_4(uid: str):
+    conn = sqlite3.connect(""db_4.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_4() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_4(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_4(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_4 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_5(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_5(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_5(uid: str):
+    conn = sqlite3.connect(""db_5.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_5() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_5(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_5(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_5 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_6(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_6(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_6(uid: str):
+    conn = sqlite3.connect(""db_6.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_6() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_6(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_6(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_6 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_7(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_7(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_7(uid: str):
+    conn = sqlite3.connect(""db_7.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_7() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_7(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_7(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_7 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_8(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_8(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_8(uid: str):
+    conn = sqlite3.connect(""db_8.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_8() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_8(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_8(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_8 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_9(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_9(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_9(uid: str):
+    conn = sqlite3.connect(""db_9.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_9() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_9(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_9(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_9 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_10(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_10(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_10(uid: str):
+    conn = sqlite3.connect(""db_10.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_10() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_10(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_10(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_10 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_11(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_11(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_11(uid: str):
+    conn = sqlite3.connect(""db_11.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_11() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_11(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_11(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_11 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_12(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_12(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_12(uid: str):
+    conn = sqlite3.connect(""db_12.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_12() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_12(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_12(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_12 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def eval_call_13(cmd_input: str):
+    return eval(cmd_input)
+",1,security,python
+"import os
+def os_sys_13(user_arg: str):
+    os.system(""echo "" + user_arg)
+",1,security,python
+"import sqlite3
+def sql_inject_13(uid: str):
+    conn = sqlite3.connect(""db_13.sqlite"")
+    conn.execute(f""SELECT * FROM users WHERE id = '{uid}'"")
+",1,security,python
+"#include <stdio.h>
+void gets_call_13() {
+    char buf[32];
+    gets(buf);
+}
+",1,security,c
+"#include <string.h>
+void strcpy_overflow_13(char *src) {
+    char dest[16];
+    strcpy(dest, src);
+}
+",1,security,c
+"#include <stdio.h>
+void format_string_13(char *fmt) {
+    printf(fmt);
+}
+",1,security,c
+"public class StringRefEq_13 {
+    public boolean check(String a, String b) {
+        return a == b; // BUG: Reference equality
+    }
+}
+",1,security,java
+"def file_unclosed_0(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_0 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_0 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_1(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_1 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_1 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_2(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_2 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_2 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_3(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_3 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_3 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_4(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_4 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_4 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_5(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_5 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_5 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_6(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_6 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_6 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_7(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_7 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_7 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_8(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_8 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_8 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_9(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_9 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_9 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_10(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_10 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_10 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def file_unclosed_11(filepath: str):
+    f = open(filepath, 'r')
+    content = f.read()
+    return content
+",1,resource_leak,python
+"import java.util.Scanner;
+import java.io.File;
+public class ScannerLeak_11 {
+    public void scan(String p) throws Exception {
+        Scanner sc = new Scanner(new File(p));
+        while (sc.hasNext()) System.out.println(sc.next());
+    }
+}
+",1,resource_leak,java
+"import java.io.FileInputStream;
+public class StreamLeak_11 {
+    public void readBytes(String path) throws Exception {
+        FileInputStream fis = new FileInputStream(path);
+        int b = fis.read();
+    }
+}
+",1,resource_leak,java
+"def list_oob_0():
+    items = [1, 2, 3]
+    return items[10]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_0() {
+    int arr[5];
+    arr[6] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_0() {
+    std::string text = ""test"";
+    char c = text[10];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_0 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_0 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[5];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_1():
+    items = [1, 2, 3]
+    return items[11]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_1() {
+    int arr[5];
+    arr[7] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_1() {
+    std::string text = ""test"";
+    char c = text[11];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_1 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_1 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[6];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_2():
+    items = [1, 2, 3]
+    return items[12]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_2() {
+    int arr[5];
+    arr[8] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_2() {
+    std::string text = ""test"";
+    char c = text[12];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_2 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_2 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[7];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_3():
+    items = [1, 2, 3]
+    return items[13]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_3() {
+    int arr[5];
+    arr[9] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_3() {
+    std::string text = ""test"";
+    char c = text[13];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_3 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_3 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[8];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_4():
+    items = [1, 2, 3]
+    return items[14]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_4() {
+    int arr[5];
+    arr[10] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_4() {
+    std::string text = ""test"";
+    char c = text[14];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_4 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_4 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[9];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_5():
+    items = [1, 2, 3]
+    return items[15]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_5() {
+    int arr[5];
+    arr[11] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_5() {
+    std::string text = ""test"";
+    char c = text[15];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_5 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_5 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[10];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_6():
+    items = [1, 2, 3]
+    return items[16]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_6() {
+    int arr[5];
+    arr[12] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_6() {
+    std::string text = ""test"";
+    char c = text[16];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_6 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_6 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[11];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_7():
+    items = [1, 2, 3]
+    return items[17]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_7() {
+    int arr[5];
+    arr[13] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_7() {
+    std::string text = ""test"";
+    char c = text[17];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_7 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_7 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[12];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_8():
+    items = [1, 2, 3]
+    return items[18]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_8() {
+    int arr[5];
+    arr[14] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_8() {
+    std::string text = ""test"";
+    char c = text[18];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_8 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_8 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[13];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_9():
+    items = [1, 2, 3]
+    return items[19]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_9() {
+    int arr[5];
+    arr[15] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_9() {
+    std::string text = ""test"";
+    char c = text[19];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_9 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_9 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[14];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_10():
+    items = [1, 2, 3]
+    return items[20]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_10() {
+    int arr[5];
+    arr[16] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_10() {
+    std::string text = ""test"";
+    char c = text[20];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_10 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_10 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[15];
+    }
+}
+",1,null_or_bounds,java
+"def list_oob_11():
+    items = [1, 2, 3]
+    return items[21]
+",1,null_or_bounds,python
+"#include <stdio.h>
+void static_bounds_11() {
+    int arr[5];
+    arr[17] = 99;
+}
+",1,null_or_bounds,c
+"#include <iostream>
+#include <string>
+void str_bounds_11() {
+    std::string text = ""test"";
+    char c = text[21];
+}
+",1,null_or_bounds,cpp
+"public class NullDeref_11 {
+    public int getLength() {
+        String str = null;
+        return str.length();
+    }
+}
+",1,null_or_bounds,java
+"public class JavaBounds_11 {
+    public int access() {
+        int[] vals = new int[3];
+        return vals[16];
+    }
+}
+",1,null_or_bounds,java
+"def loop_forever_0():
+    while True:
+        val = 0
+",1,control_flow,python
+"def recurse_forever_0(x: int) -> int:
+    return recurse_forever_0(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_0() {
+    while (1) {
+        int x = 0;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_0(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_0 {
+    public void run() {
+        while (true) {
+            int k = 0;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_1():
+    while True:
+        val = 1
+",1,control_flow,python
+"def recurse_forever_1(x: int) -> int:
+    return recurse_forever_1(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_1() {
+    while (1) {
+        int x = 1;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_1(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_1 {
+    public void run() {
+        while (true) {
+            int k = 1;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_2():
+    while True:
+        val = 2
+",1,control_flow,python
+"def recurse_forever_2(x: int) -> int:
+    return recurse_forever_2(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_2() {
+    while (1) {
+        int x = 2;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_2(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_2 {
+    public void run() {
+        while (true) {
+            int k = 2;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_3():
+    while True:
+        val = 3
+",1,control_flow,python
+"def recurse_forever_3(x: int) -> int:
+    return recurse_forever_3(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_3() {
+    while (1) {
+        int x = 3;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_3(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_3 {
+    public void run() {
+        while (true) {
+            int k = 3;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_4():
+    while True:
+        val = 4
+",1,control_flow,python
+"def recurse_forever_4(x: int) -> int:
+    return recurse_forever_4(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_4() {
+    while (1) {
+        int x = 4;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_4(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_4 {
+    public void run() {
+        while (true) {
+            int k = 4;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_5():
+    while True:
+        val = 5
+",1,control_flow,python
+"def recurse_forever_5(x: int) -> int:
+    return recurse_forever_5(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_5() {
+    while (1) {
+        int x = 5;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_5(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_5 {
+    public void run() {
+        while (true) {
+            int k = 5;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_6():
+    while True:
+        val = 6
+",1,control_flow,python
+"def recurse_forever_6(x: int) -> int:
+    return recurse_forever_6(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_6() {
+    while (1) {
+        int x = 6;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_6(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_6 {
+    public void run() {
+        while (true) {
+            int k = 6;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_7():
+    while True:
+        val = 7
+",1,control_flow,python
+"def recurse_forever_7(x: int) -> int:
+    return recurse_forever_7(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_7() {
+    while (1) {
+        int x = 7;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_7(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_7 {
+    public void run() {
+        while (true) {
+            int k = 7;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_8():
+    while True:
+        val = 8
+",1,control_flow,python
+"def recurse_forever_8(x: int) -> int:
+    return recurse_forever_8(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_8() {
+    while (1) {
+        int x = 8;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_8(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_8 {
+    public void run() {
+        while (true) {
+            int k = 8;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_9():
+    while True:
+        val = 9
+",1,control_flow,python
+"def recurse_forever_9(x: int) -> int:
+    return recurse_forever_9(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_9() {
+    while (1) {
+        int x = 9;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_9(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_9 {
+    public void run() {
+        while (true) {
+            int k = 9;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_10():
+    while True:
+        val = 10
+",1,control_flow,python
+"def recurse_forever_10(x: int) -> int:
+    return recurse_forever_10(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_10() {
+    while (1) {
+        int x = 10;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_10(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_10 {
+    public void run() {
+        while (true) {
+            int k = 10;
+        }
+    }
+}
+",1,control_flow,java
+"def loop_forever_11():
+    while True:
+        val = 11
+",1,control_flow,python
+"def recurse_forever_11(x: int) -> int:
+    return recurse_forever_11(x)
+",1,control_flow,python
+"#include <stdio.h>
+void infinite_while_11() {
+    while (1) {
+        int x = 11;
+    }
+}
+",1,control_flow,c
+"#include <stdio.h>
+int missing_ret_11(int x) {
+    if (x > 0) return x;
+}
+",1,control_flow,c
+"public class InfiniteJava_11 {
+    public void run() {
+        while (true) {
+            int k = 11;
+        }
+    }
+}
+",1,control_flow,java
+"def syntax_func_0(a, b)
+    return a + b + 0
+",1,syntax_error,python
+"def unclosed_parens_0(x):
+    total = (x * 2 + (0 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_0() {
+    int num = 0
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_1(a, b)
+    return a + b + 1
+",1,syntax_error,python
+"def unclosed_parens_1(x):
+    total = (x * 2 + (1 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_1() {
+    int num = 1
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_2(a, b)
+    return a + b + 2
+",1,syntax_error,python
+"def unclosed_parens_2(x):
+    total = (x * 2 + (2 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_2() {
+    int num = 2
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_3(a, b)
+    return a + b + 3
+",1,syntax_error,python
+"def unclosed_parens_3(x):
+    total = (x * 2 + (3 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_3() {
+    int num = 3
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_4(a, b)
+    return a + b + 4
+",1,syntax_error,python
+"def unclosed_parens_4(x):
+    total = (x * 2 + (4 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_4() {
+    int num = 4
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_5(a, b)
+    return a + b + 5
+",1,syntax_error,python
+"def unclosed_parens_5(x):
+    total = (x * 2 + (5 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_5() {
+    int num = 5
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_6(a, b)
+    return a + b + 6
+",1,syntax_error,python
+"def unclosed_parens_6(x):
+    total = (x * 2 + (6 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_6() {
+    int num = 6
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_7(a, b)
+    return a + b + 7
+",1,syntax_error,python
+"def unclosed_parens_7(x):
+    total = (x * 2 + (7 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_7() {
+    int num = 7
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_8(a, b)
+    return a + b + 8
+",1,syntax_error,python
+"def unclosed_parens_8(x):
+    total = (x * 2 + (8 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_8() {
+    int num = 8
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_9(a, b)
+    return a + b + 9
+",1,syntax_error,python
+"def unclosed_parens_9(x):
+    total = (x * 2 + (9 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_9() {
+    int num = 9
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_10(a, b)
+    return a + b + 10
+",1,syntax_error,python
+"def unclosed_parens_10(x):
+    total = (x * 2 + (10 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_10() {
+    int num = 10
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
+"def syntax_func_11(a, b)
+    return a + b + 11
+",1,syntax_error,python
+"def unclosed_parens_11(x):
+    total = (x * 2 + (11 + 1)
+    return total
+",1,syntax_error,python
+"#include <stdio.h>
+void no_semicolon_11() {
+    int num = 11
+    printf(""%d\n"", num);
+}
+",1,syntax_error,c
